@@ -1,0 +1,8 @@
+-cp src
+-cp ../crossbyte/src
+-cp ../crossbyte/tests
+-cp tests
+-lib utest
+-D crossbyte_lz4_native
+-main crossbyte.lz4.NativeLz4TestMain
+--cpp ../crossbyte/export/crossbyte-lz4-native-test

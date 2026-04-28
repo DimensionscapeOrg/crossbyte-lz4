@@ -1,0 +1,8 @@
+export/
+bin/
+*.n
+*.ndll
+*.dll
+*.exe
+*.pdb
+*.ilk

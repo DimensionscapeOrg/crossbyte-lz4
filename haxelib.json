@@ -1,0 +1,13 @@
+{
+	"name": "crossbyte-lz4",
+	"url": "https://github.com/DimensionscapeOrg/crossbyte-lz4",
+	"license": "BSD",
+	"tags": ["crossbyte", "lz4", "compression", "cpp"],
+	"description": "Optional native LZ4 backend and oracle for CrossByte",
+	"version": "0.0.1",
+	"releasenote": "Initial native LZ4 extension scaffold",
+	"contributors": [
+		"Dimensionscape"
+	],
+	"classPath": "src"
+}
