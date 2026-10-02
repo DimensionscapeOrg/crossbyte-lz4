@@ -46,9 +46,9 @@ class NativeLz4 {
 		Decodes one block.
 
 		@param maxOutputSize Bytes to produce before giving up, or `0` for no
-		       limit. LZ4 ratios have no ceiling either, four bytes of window
-		       replayed a million times is a valid block, so anything
-		       decoding a block it did not author wants to name one. The block
+		       limit. LZ4 ratios have no ceiling: four bytes of window replayed
+		       a million times is a valid block. Anything decoding a block it
+		       did not author should name a limit. The block
 		       is measured from its sequence headers before anything is
 		       allocated for it, and one that decodes past this is refused
 		       then.

@@ -95,10 +95,9 @@ class NativeLz4Test extends utest.Test {
 	}
 
 	public function testByteArrayHandsTheLimitDown():Void {
-		// CrossByte's ByteArray, on this backend, passes its limit down
-		// rather than decoding the whole block here and measuring it
-		// afterwards, which heard only that a block cut short past the
-		// limit was cut short.
+		// CrossByte's ByteArray, on this backend, passes its limit down to the
+		// decoder, so a block cut short past the limit is reported as over the
+		// limit rather than as merely cut short.
 		var whole = NativeLz4.compress(__text(2 << 20));
 		var cut:ByteArray = ByteArray.fromBytes(whole.sub(0, whole.length - 1));
 		Assert.raises(() -> cut.uncompress(CompressionAlgorithm.LZ4, 1 << 20), RangeError);

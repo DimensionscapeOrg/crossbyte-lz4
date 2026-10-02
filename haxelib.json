@@ -4,10 +4,13 @@
 	"license": "BSD",
 	"tags": ["crossbyte", "lz4", "compression", "cpp"],
 	"description": "Optional native LZ4 backend and oracle for CrossByte",
-	"version": "0.0.1",
-	"releasenote": "Initial native LZ4 extension scaffold",
+	"version": "1.0.0",
+	"releasenote": "1.0.0: the native LZ4 backend for CrossByte 1.0.0's ByteArray.",
 	"contributors": [
 		"Dimensionscape"
 	],
-	"classPath": "src"
+	"classPath": "src",
+	"dependencies": {
+		"crossbyte": ""
+	}
 }

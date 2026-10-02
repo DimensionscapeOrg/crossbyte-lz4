@@ -126,7 +126,7 @@ Status decode(const char* source, int length, int limit, char** out, int* produc
 		return STATUS_NO_MEMORY;
 	}
 	// Exactly the room the block needs, so a block that says one size and
-	// holds another, a bad offset, a match into the last five bytes, is
+	// holds another (a bad offset, or a match into the last five bytes) is
 	// refused by the library rather than decoded into slack.
 	int decoded = LZ4_decompress_safe(source, buffer, length, (int)size);
 	if (decoded != (int)size) {
